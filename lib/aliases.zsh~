@@ -1,0 +1,11 @@
+alias ll='ls -la'
+alias lh='ls -lah'
+alias ...='cd ../..'
+
+#Alias for creating LVM Snapshots
+alias snapshot_root='sudo lvcreate -L 5G -s -n root_$(date +%d_%m_%G__%H_%M) /dev/ubuntu-vg/root'
+alias snapshot_home='sudo lvcreate -L 5G -s -n home_$(date +%d_%m_%G__%H_%M) /dev/ubuntu-vg/home'
+
+# commoand too increase volume above 100%
+alias volume-up='pactl set-sink-volume 1 +5%'
+alias volume-down='pactl set-sink-volume 1 -5%'
