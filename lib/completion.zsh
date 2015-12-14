@@ -70,6 +70,9 @@ if [ "x$COMPLETION_WAITING_DOTS" = "xtrue" ]; then
     zle expand-or-complete
     zle redisplay
   }
+  
   zle -N expand-or-complete-with-dots
   bindkey "^I" expand-or-complete-with-dots
 fi
+
+

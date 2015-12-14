@@ -24,3 +24,11 @@ precmd () { vcs_info }
 
 PROMPT='%{%F{green}%}%n@%{%F{green}%}%m%{%F{3}%}[%T]%:%{%F{blue}%}%~%  %#%{%f%}'
 RPROMPT='(%F{red}%?%f) %F{yellow}$(git branch 2>/dev/null)%f'
+
+# Load powerline
+if [ -f `which powerline-daemon 2>>/dev/null` ]
+then
+	powerline-daemon -q
+	. /usr/share/powerline/zsh/powerline.zsh
+fi
+
